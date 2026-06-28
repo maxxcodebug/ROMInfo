@@ -1,0 +1,20 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := ROMInfo
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_BUILT_MODULE_STEM := package.apk
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_CERTIFICATE := platform
+LOCAL_PRIVILEGED_MODULE := false
+LOCAL_OVERRIDES_PACKAGES :=
+
+# Path to your prebuilt APK
+LOCAL_SRC_FILES := prebuilt/ROMInfo.apk
+
+# Dont allow user to uninstall
+LOCAL_REPLACE_PREBUILT_APK_INSTALLED := $(LOCAL_PATH)/prebuilt/ROMInfo.apk
+
+include $(BUILD_PREBUILT)

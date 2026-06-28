@@ -1,0 +1,2 @@
+-keep class com.rominfo.app.data.** { *; }
+-keepattributes *Annotation*

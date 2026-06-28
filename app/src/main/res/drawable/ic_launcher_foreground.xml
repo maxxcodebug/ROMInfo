@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#6750A4"
+        android:pathData="M54,54m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
+
+    <!-- White chip/ROM board shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,35 L73,35 Q75,35 75,37 L75,71 Q75,73 73,73 L35,73 Q33,73 33,71 L33,37 Q33,35 35,35 Z"
+        android:fillAlpha="0.15"/>
+
+    <!-- Chip outline -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:pathData="M38,38 L70,38 Q72,38 72,40 L72,68 Q72,70 70,70 L38,70 Q36,70 36,68 L36,40 Q36,38 38,38 Z"/>
+
+    <!-- Left pins -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M33,44 L27,44"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M33,50 L27,50"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M33,58 L27,58"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M33,64 L27,64"/>
+
+    <!-- Right pins -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M75,44 L81,44"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M75,50 L81,50"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M75,58 L81,58"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M75,64 L81,64"/>
+
+    <!-- Top pins -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M44,36 L44,30"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M54,36 L54,30"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M64,36 L64,30"/>
+
+    <!-- Bottom pins -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M44,72 L44,78"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M54,72 L54,78"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:pathData="M64,72 L64,78"/>
+
+    <!-- Inner circuit lines -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M44,48 L48,48 L48,44 L56,44"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M64,48 L60,48 L60,44"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M44,60 L48,60 L48,64 L56,64"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="1.5" android:fillColor="#00000000"
+        android:pathData="M64,60 L60,60 L60,64"/>
+
+    <!-- Center dot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+
+    <!-- Small dots on circuit -->
+    <path android:fillColor="#FFFFFF" android:pathData="M48,48m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M60,48m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M48,60m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M60,60m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"/>
+
+</vector>

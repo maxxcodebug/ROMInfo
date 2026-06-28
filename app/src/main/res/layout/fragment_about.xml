@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="80dp">
+
+        <!-- ROM HEADER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="?attr/colorPrimaryContainer"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_rom_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ROM Name"
+                    android:textAppearance="?attr/textAppearanceDisplaySmall"
+                    android:textColor="?attr/colorOnPrimaryContainer" />
+
+                <TextView
+                    android:id="@+id/tv_rom_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="v1.0"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnPrimaryContainer" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/tv_build_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="OFFICIAL"
+                    android:checkable="false"
+                    style="@style/Widget.Material3.Chip.Assist" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ROM INFO CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorOutlineVariant">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ROM Information"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorPrimary"
+                    android:paddingBottom="12dp" />
+
+                <include layout="@layout/item_info_row"
+                    android:id="@+id/row_android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="8dp"/>
+
+                <include layout="@layout/item_info_row"
+                    android:id="@+id/row_build_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="8dp"/>
+
+                <include layout="@layout/item_info_row"
+                    android:id="@+id/row_variant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="8dp"/>
+
+                <include layout="@layout/item_info_row"
+                    android:id="@+id/row_security"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ROM INFO (hidden text fields used by Java) -->
+        <TextView android:id="@+id/tv_android_version" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+        <TextView android:id="@+id/tv_build_date" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+        <TextView android:id="@+id/tv_build_variant" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+        <TextView android:id="@+id/tv_security_patch" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone"/>
+
+        <!-- DEVICE CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorOutlineVariant">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Information"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorPrimary"
+                    android:paddingBottom="12dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Device"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <TextView android:id="@+id/tv_device_name"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="—"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="4dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginVertical="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Codename"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <TextView android:id="@+id/tv_device_codename"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="—"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="4dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginVertical="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Architecture"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <TextView android:id="@+id/tv_arch"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="—"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="4dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginVertical="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Android Sec Patch"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <TextView android:id="@+id/tv_android_sec_patch"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="—"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="?attr/colorOutlineVariant" android:layout_marginVertical="4dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Kernel"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                    <TextView android:id="@+id/tv_kernel"
+                        android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="—"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- MAINTAINER CARD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="?attr/colorOutlineVariant">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maintainer"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorPrimary"
+                    android:paddingBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_maintainer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textAppearance="?attr/textAppearanceTitleSmall" />
+
+                <TextView
+                    android:id="@+id/tv_maintainer_tg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@telegram"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_telegram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Telegram"
+                        android:layout_marginEnd="8dp"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        app:icon="@android:drawable/ic_dialog_info"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_github"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GitHub"
+                        android:layout_marginEnd="8dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_xda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="XDA"
+                        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_donate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="☕ Donate / Buy me a Coffee"
+                    android:layout_marginTop="8dp"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

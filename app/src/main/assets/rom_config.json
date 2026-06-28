@@ -1,0 +1,39 @@
+{
+  "rom": {
+    "name": "YourROM",
+    "version": "1.0",
+    "android_version": "16 QPR2",
+    "build_type": "OFFICIAL",
+    "build_date": "2025-06-28",
+    "build_variant": "GAPPS",
+    "device_name": "Your Device",
+    "device_codename": "codename",
+    "architecture": "arm64-v8a",
+    "security_patch": "June 2025"
+  },
+  "maintainer": {
+    "name": "Your Name",
+    "telegram": "@yourusername",
+    "github": "yourgithub",
+    "xda_thread": "https://xdaforums.com/your-thread",
+    "donation_url": ""
+  },
+  "links": {
+    "telegram_group": "https://t.me/yourgroup",
+    "telegram_channel": "https://t.me/yourchannel",
+    "github_repo": "https://github.com/yourgithub/yourrom",
+    "sourceforge": "https://sourceforge.net/projects/yourrom/"
+  },
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2025-06-28",
+      "changes": [
+        "Initial release",
+        "Based on Android 16 QPR2",
+        "Material You design",
+        "Performance improvements"
+      ]
+    }
+  ]
+}

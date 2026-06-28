@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ROM Info</string>
+    <string name="tab_about">About</string>
+    <string name="tab_changelog">Changelog</string>
+    <string name="tab_links">Links</string>
+    <string name="version_label">Version %1$s</string>
+    <string name="android_label">Android %1$s</string>
+</resources>
